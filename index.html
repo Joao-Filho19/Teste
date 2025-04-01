@@ -59,10 +59,11 @@
     <script>
         function moveButton() {
             let button = document.querySelector('.no');
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            button.style.left = x + 'px';
-            button.style.top = y + 'px';
+            let maxX = window.innerWidth * 0.4; // Reduz o deslocamento horizontal
+            let maxY = window.innerHeight * 0.4; // Reduz o deslocamento vertical
+            let x = Math.random() * maxX - maxX / 2; // Mantém dentro da tela
+            let y = Math.random() * maxY - maxY / 2;
+            button.style.transform = `translate(${x}px, ${y}px)`;
         }
         function showMessage() {
             document.getElementById('message').classList.remove('hidden');
