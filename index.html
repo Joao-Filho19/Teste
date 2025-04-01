@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Você me ama?</title>
+    <title>Carol, você me ama?</title>
     <style>
         body {
             display: flex;
@@ -11,15 +11,19 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            background-color: pink;
+            background-color: #fdf2f8;
             font-family: Arial, sans-serif;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/heart-pattern.png'), url('https://www.transparenttextures.com/patterns/flowers.png');
         }
         h1 {
-            color: white;
+            color: #d63384;
         }
         .buttons {
             margin-top: 20px;
+            position: relative;
         }
         button {
             padding: 10px 20px;
@@ -45,10 +49,10 @@
     </style>
 </head>
 <body>
-    <h1>Você me ama?</h1>
+    <h1>Carol, você me ama?</h1>
     <div class="buttons">
         <button class="yes" onclick="showMessage()">Sim</button>
-        <button class="no" onmouseover="moveButton()">Não</button>
+        <button class="no" onmouseover="moveButton()" onclick="moveButton()">Não</button>
     </div>
     <h2 class="hidden" id="message">Eu sabia! 😍❤️</h2>
     
